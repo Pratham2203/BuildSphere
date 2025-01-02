@@ -11,8 +11,10 @@ const port = process.env.PORT || 3000;
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: '*'
-    }
+        origin: 'https://build-sphere-frontend.vercel.app', // Your frontend URL
+        methods: ['GET', 'POST'],
+        credentials: true,
+    },
 });
 
 
