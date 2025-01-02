@@ -11,7 +11,10 @@ const app=express();
 connect();
 app.use(cookieParser());
 app.use(morgan('dev'));
-app.use(cors());
+app.use(cors({
+    origin: 'https://build-sphere-frontend.vercel.app'|| '*', 
+    credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use("/users",userRoutes);
