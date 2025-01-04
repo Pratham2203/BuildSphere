@@ -12,7 +12,8 @@ export const initializeSocket = (projectId) => {
         },
         query: {
             projectId
-        }
+        },
+        transports: ['websocket'],
     });
 
     return socketInstance;
