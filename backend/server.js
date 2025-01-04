@@ -19,7 +19,7 @@ const io = new Server(server, {
         methods: ['GET', 'POST'],
         credentials: true,
     },
-    transports: ['websocket'], // Force WebSocket transport
+    transports: ['websocket','polling'], // Force WebSocket transport
 });
 
 // Redis Adapter (Uncomment if using Redis for scalability)
