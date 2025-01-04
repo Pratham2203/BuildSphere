@@ -13,7 +13,7 @@ export const initializeSocket = (projectId) => {
         query: {
             projectId
         },
-        transports: ['websocket'],
+        transports: ['websocket','polling'],
     });
 
     return socketInstance;
