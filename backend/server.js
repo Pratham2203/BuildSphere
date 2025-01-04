@@ -115,6 +115,10 @@ io.on('connection', (socket) => {
     });
 });
 
+io.on('connect_error', (error) => {
+    console.error('WebSocket connection error:', error.message);
+});
+
 // Start the server
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);
